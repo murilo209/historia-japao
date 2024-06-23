@@ -1,8 +1,4 @@
-
 <!DOCTYPE html>
-<html lang="pt">
-<head>
-  <!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="UTF-8"/>
@@ -11,91 +7,86 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="style.css">
+<title>Formulário de Contato</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/jpg" href="imgs/js.png">
+<script language="javascript" type="text/JavaScript">
+    function validar() {
+        var data_nasc = document.forms["form1"]["data_nasc"].value;
+        var nome = document.forms["form1"]["nome"].value;
+        var nota = document.forms["form1"]["nota"].value;
+        var obs = document.forms["form1"]["obs"].value;
+
+        if (data_nasc == "") {
+            alert('Insira sua data de nascimento');
+            document.forms["form1"]["data_nasc"].focus();
+            return false;
+        }
+        if (nome == "") {
+            alert('Insira o seu nome');
+            document.forms["form1"]["nome"].focus();
+            return false;
+        }
+        if (nota == "") {
+            alert('Insira a nota para o site');
+            document.forms["form1"]["nota"].focus();
+            return false;
+        }
+        if (obs == "") {
+            alert('Insira suas observações');
+            document.forms["form1"]["obs"].focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+</head>
 <body bgcolor="grey">
 <nav id="menu">
-<ul>
-<li> <a href="index.html"><i class="material-icons left"><img src="img/home.png" width="30"></i>Home</a></li>
-<li> <a href="historia.html"><i class="material-icons left"><img src="img/livro.png" width="30"></i>Historia</a></li>
-<li> <a href="Cultura.html"><i class="material-icons left"><img src="img/dragao.png" width="30"></i>cultura</a></li>
-<li> <a href="monumentos.html"><i class="material-icons left"><img src="img/monumento.png" width="30"></i>Monumentos</a></li>
-<li> <a href="geografia.html"><i class="material-icons left"><img src="img/geografia.png" width="30"></i>Geografia</a></li>
-<li> <a href="bibliografia.html"><i class="material-icons left"><img src="img/bibliografia.png" width="30"></i>Bibliografia</a></li>
-<li> <a href="contato.html"><i class="material-icons left">contact_mail</i>Contato</a></li>
-</ul>
+    <ul>
+        <li> <a href="index.html"><i class="material-icons left"><img src="img/home.png" width="30"></i>Home</a></li>
+        <li> <a href="historia.html"><i class="material-icons left"><img src="img/livro.png" width="30"></i>História</a></li>
+        <li> <a href="Cultura.html"><i class="material-icons left"><img src="img/dragao.png" width="30"></i>Cultura</a></li>
+        <li> <a href="monumentos.html"><i class="material-icons left"><img src="img/monumento.png" width="30"></i>Monumentos</a></li>
+        <li> <a href="geografia.html"><i class="material-icons left"><img src="img/geografia.png" width="30"></i>Geografia</a></li>
+        <li> <a href="bibliografia.html"><i class="material-icons left"><img src="img/bibliografia.png" width="30"></i>Bibliografia</a></li>
+        <li> <a href="contato.html"><i class="material-icons left">contact_mail</i>Contato</a></li>
+    </ul>
 </nav>
-    <title>EX 1- cadastro de Animais JS</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon"    type="image/jpg"     href="imgs/js.png"> 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script language="javascript" type="text/JavaScript">
-        function validar() {
-            var data_nasc = <form1 class="data_nasc"></form1>.value;
-            var nome = <form1 class="nome"></form1>.value;
-            var nota = <form1 class="nota"></form1>.value;   
-            var obs = <form1 class="obs"></form1>.value; 
-        
-        
-        
-         if (data_nasc== ""){
-            alert ('insira sua data de nascimento')
-            form1.data_cad.focus();
-          return false;
-        }
-        if (nome_prop== ""){
-            alert ('insira o seu nome')
-            form1.nome_prop.focus();
-          return false;
-        }
-        if (nota== ""){
-            alert ('insira a nota para o site')
-            form1.raça.focus();
-          return false;
-        }
-        if (obs== ""){
-            alert ('observações')
-            form1.obs.focus();
-          return false;
-        }
-       
 
-    }
-     </script>
-</head>
+<center><h1>Formulário de Contato</h1></center>
+<hr><br><br><br>
 
+<form name="form1" action="confirma.html" method="post" onsubmit="return validar()">
+    <center>  
+        Data de Nascimento <input name="data_nasc" type="date"> <br><br>
+        Seu Nome <input name="nome" type="text"> <br><br>
+        Nota do Site
+        <select name="nota">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><br><br>
+        Observações <br><textarea cols="50" rows="10" name="obs"></textarea><br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" name="limpa" value="LIMPAR">
+    </center>
+</form>
 
-    <center><h1></h1></center> <hr><br><br><br>
-
-
-
-    <form name="form1" action="confirma.html" method="post">
-
-     <center>  
-                Data de Nascimento <input name="data_nasc" type="date"> <br><br>
-                Seu Nome <input name="nome" type="text"> <br> <br>
-                Nota do Site
-                <select name="nota">
-                <option></option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                 </select><br><br>
-                observações <br><textarea cols="50" rows="10" name="obs"></textarea><br><br>
-            <input type="submit" onclick="return validar()">
-            <input type="reset" name="limpa" value="LIMPAR"></center>
-        </form>
-     
-     <br><br><br><br><br><br><br>
-    <hr><center> <h5> Murilo Alves Oliveira <b>2024 - &copyTodos os direitos reservados</b><br>
-    <u> Trabalho acadêmico sem fins lucrativos</h5></u> </center>
-    
-    
+<br><br><br><br><br><br><br>
+<hr>
+<center>
+    <h5> Murilo Alves Oliveira <b>2024 - &copy; Todos os direitos reservados</b><br>
+    <u>Trabalho acadêmico sem fins lucrativos</u></h5>
+</center>
 </body>
 </html>
